@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:messenger/colors.dart';
 import 'package:unicons/unicons.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class ChatScreen extends StatelessWidget {
+  const ChatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -103,18 +103,84 @@ class HomeScreen extends StatelessWidget {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            physics: ClampingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             child: Row(
-              children: List<Widget>.generate(5, (index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(200),
-                      image: DecorationImage(
-                          image: AssetImage('assets/$index.jpg'),
-                          fit: BoxFit.cover)),
+              children: List<Widget>.generate(9, (index) {
+                return Column(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(200),
+                          image: DecorationImage(
+                              image: AssetImage('assets/$index.jpg'),
+                              fit: BoxFit.cover)),
+                    ),
+                    SizedBox(
+                      width: 60,
+                      height: 60,
+                      child: Text(
+                        'Lorem ipsum',
+                        style: TextStyle(
+                          color: DarkTheme.white,
+                          height: 1.2,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                );
+              }),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: List<Widget>.generate(9, (index) {
+                return Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(200),
+                        image: DecorationImage(
+                            image: AssetImage('assets/$index.jpg'),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Lorem',
+                          style: TextStyle(
+                            color: DarkTheme.white,
+                            height: 2,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                        Container(
+                          width: _size.width - 210,
+                          child: Text(
+                            'Lorem: ipsum dolor sit amet, consectetur adipiscing elit,',
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: DarkTheme.white,
+                              height: 1.4,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
                 );
               }),
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:messenger/views/screens/home_screen.dart';
+import 'package:messenger/views/bottom_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const BottomNavigationBarWidget(),
     );
   }
 }
