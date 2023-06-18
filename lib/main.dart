@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:messenger/views/bottom_navigation.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
