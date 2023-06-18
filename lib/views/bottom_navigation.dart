@@ -23,11 +23,71 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
     const PeopleScreen(),
     const StoryScreen(),
   ];
+  final List<String> pageNames = [
+    'Chats',
+    'Calls',
+    'People',
+    'Stories',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: DarkTheme.background,
+      appBar: AppBar(
+        backgroundColor: DarkTheme.background,
+        title: Text(
+          pageNames[_currentIndex],
+          style: TextStyle(
+            color: DarkTheme.white,
+            fontWeight: FontWeight.bold,
+            height: 1,
+          ),
+        ),
+        leadingWidth: 50,
+        leading: Container(
+          margin: const EdgeInsets.only(left: 10),
+          child: CircleAvatar(
+            backgroundColor: DarkTheme.iconBackground,
+            child: IconButton(
+              color: DarkTheme.white,
+              icon: Icon(
+                Icons.menu,
+                color: DarkTheme.white,
+              ),
+              onPressed: () {},
+            ),
+          ),
+        ),
+        actions: [
+          Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(left: 10),
+                child: CircleAvatar(
+                  backgroundColor: DarkTheme.iconBackground,
+                  child: IconButton(
+                    color: DarkTheme.white,
+                    icon: Image.asset('assets/icons/camera.png'),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 10),
+                child: CircleAvatar(
+                  backgroundColor: DarkTheme.iconBackground,
+                  child: IconButton(
+                    color: Colors.white,
+                    icon: Image.asset('assets/icons/topBar.png'),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blue,

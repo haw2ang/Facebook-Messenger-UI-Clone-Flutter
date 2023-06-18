@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger/colors.dart';
 
 class CallScreen extends StatefulWidget {
   const CallScreen({super.key});
@@ -10,6 +11,8 @@ class CallScreen extends StatefulWidget {
 class _CallScreenState extends State<CallScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: DarkTheme.background,
+    );
   }
 }

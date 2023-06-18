@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger/colors.dart';
 
 class PeopleScreen extends StatefulWidget {
   const PeopleScreen({super.key});
@@ -10,6 +11,8 @@ class PeopleScreen extends StatefulWidget {
 class _PeopleScreenState extends State<PeopleScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: DarkTheme.background,
+    );
   }
 }

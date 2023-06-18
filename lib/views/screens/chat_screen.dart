@@ -10,66 +10,6 @@ class ChatScreen extends StatelessWidget {
     final _size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: DarkTheme.background,
-      appBar: AppBar(
-        backgroundColor: DarkTheme.background,
-        title: Text(
-          'Chats',
-          style: TextStyle(
-            color: DarkTheme.white,
-            fontWeight: FontWeight.bold,
-            height: 1,
-          ),
-        ),
-        leadingWidth: 50,
-        leading: Container(
-          margin: const EdgeInsets.only(left: 10),
-          child: CircleAvatar(
-            backgroundColor: DarkTheme.iconBackground,
-            child: IconButton(
-              color: DarkTheme.white,
-              icon: Icon(
-                Icons.menu,
-                color: DarkTheme.white,
-              ),
-              onPressed: () {},
-            ),
-          ),
-        ),
-        actions: [
-          Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(left: 10),
-                child: CircleAvatar(
-                  backgroundColor: DarkTheme.iconBackground,
-                  child: IconButton(
-                    color: DarkTheme.white,
-                    icon: Icon(
-                      Icons.camera_alt_rounded,
-                      color: DarkTheme.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(left: 10),
-                child: CircleAvatar(
-                  backgroundColor: DarkTheme.iconBackground,
-                  child: IconButton(
-                    color: Colors.white,
-                    icon: const Icon(
-                      UniconsLine.pen,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-              ),
-            ],
-          )
-        ],
-      ),
       body: ListView(
         shrinkWrap: true,
         children: [

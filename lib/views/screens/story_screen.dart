@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../colors.dart';
+
 class StoryScreen extends StatefulWidget {
   const StoryScreen({super.key});
 
@@ -10,6 +12,8 @@ class StoryScreen extends StatefulWidget {
 class _StoryScreenState extends State<StoryScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: DarkTheme.background,
+    );
   }
 }
