@@ -5,4 +5,7 @@
 
 
 <h3>ScreenShots:</h3>
-<img src="assets/screenshot.png" width="200" />
+<div style="display:flex; justify-content: space-between;">
+  <img src="assets/screenshot1.png" width="250" />
+  <img src="assets/screenshot2.png" width="250" />
+</div>
