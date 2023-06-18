@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:messenger/colors.dart';
-import 'package:unicons/unicons.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});

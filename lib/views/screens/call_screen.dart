@@ -13,6 +13,21 @@ class _CallScreenState extends State<CallScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: DarkTheme.background,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 15.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Recents',
+              style: TextStyle(
+                color: DarkTheme.gery,
+              ),
+              textAlign: TextAlign.left,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
